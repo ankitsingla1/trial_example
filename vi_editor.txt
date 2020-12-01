@@ -1,0 +1,171 @@
+How to view a file ?
+
+view Filename
+
+Suppose you opened a file with view command and did some modification .How to save the modifications ?
+
+:wq!
+
+How to save a file ?
+
+:w
+Shift + zz
+
+Suppose 2 users opened the same file .one of the user modified some contents .The other user wants to see the content without exiting from the vi editor .What is the command to refresh/ see the modified contents of the file ?
+
+:e!
+
+
+How to insert text to a file ?
+
+i
+
+What is the command to come back to the shell temporarily ?
+
+:sh
+
+What is the command to save and exit from vi editor ?
+
+:wq
+
+What is the command to exit without save ?
+
+:q!
+
+What is wq! ?
+
+Force save
+
+What is q! ?
+
+quit without save
+
+How to go to the last line of a file ?
+
+Shift +g
+
+How to go the end of the current line ?
+
+$
+
+How to add a line below and above the current cursor position ?
+
+small case o  -- Below
+Caps O --Before the cursor
+
+How to go to a specific line ? Let line 10 ?
+
+:10
+
+10G
+
+How to append text to the end of a line and in between ?
+
+A -- append text at the end of the line
+a -- Just after the cursor position
+
+How to join two lines ?
+J
+
+How to set the line numbers ?
+
+:set nu
+
+How to unset the line number ?
+
+:set nonu
+
+How to move up ,down ,left and right from the cursor position ?
+
+up - k
+down -j
+left - h
+right - l
+
+How to delete a word ?
+
+dw
+
+
+
+
+How to delete 3 words from current cursor position ? 
+
+3dw
+
+How to delete 3 characters from current cursor position ?
+
+3x
+
+How to replace a character ?
+r
+How to delete a single line ?
+
+dd
+
+How to delete multiple lines ?
+
+ndd -- N is number of lines to be reoved.
+
+How to undo ?
+
+Esc +u
+
+How to copy line # 15 to # 20  after line number 36 ?
+
+:15,20 co 36
+
+How to move line # 15 to # 20  after line number 36 ?
+
+:15,20 mo 36
+
+How to copy 5 lines from the current position and paste it as per requirement ?
+
+5yy 
+p -- To paste
+
+What is w ?
+
+save or write
+
+
+How many modes are present in vi ? 
+
+3 - Command mode ,Insert/append mode ,Ex mode
+
+Suppose in a file Qwest pattern is present . How will you replace Qwest with IBM ?
+
+:1,$ s/Qwest/IBM/g
+
+Suppose in a file Qwest pattern is present . How will you replace Qwest with IBM  from line number 3 to 9?
+
+:3,9 s/Qwest/IBM/g
+
+What is . And $ ?
+
+. --> Current line
+$ -->Last line
+
+Suppose in a file Qwest pattern is present . How will you replace Qwest with IBM  from line number 1 to current cursor position?
+
+
+:1,. s/Qwest/IBM/g
+
+Suppose in a file Qwest pattern is present . How will you replace Qwest with IBM  from line number current cursor position to last line?
+
+:.,$ s/Qwest/IBM/g
+
+How to edit multiple files ?What is ‘n’ and ‘rew’ ?
+
+vi Filenames
+
+:n -->Edit the next file
+:rew --> Go to the 1st file
+
+Suppose I want edit the line 10 of a file .When the file will be opened ,I want the cursor should be present in the very beginning of line # 10 ?
+
+vi +10 filename
+
+How to copy the contents from a file and paste the same copied content in the current file .  
+
+:r filename ( It will read the content of the specified file @ current cursor position )
